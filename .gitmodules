@@ -1,0 +1,6 @@
+[submodule "packages/diffmjx-mjpc"]
+	path = packages/diffmjx-mjpc
+	url = git@github.com:a-paulus/diffmjx-mjpc.git
+[submodule "packages/mujoco"]
+	path = packages/mujoco
+	url = git@github.com:a-paulus/mujoco.git
