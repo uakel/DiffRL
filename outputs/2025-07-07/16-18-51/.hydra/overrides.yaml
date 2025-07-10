@@ -1,0 +1,4 @@
+- +env=aloha_handover
+- +diffmjx/cfd=enabled
+- +diffmjx/collision=hard
+- +diffmjx/integrator=diffrax

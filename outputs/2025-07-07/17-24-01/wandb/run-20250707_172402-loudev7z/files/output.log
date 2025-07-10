@@ -1,0 +1,21 @@
+Overwriting xml settings with: {'opt.cfd_enable': True, 'opt.cfd_solimp': [0.0, 0.01, 0.05, 1.0, 2.0], 'opt.col_soft_enable': True, 'opt.timestep': 0.01, 'opt.iterations': 4, 'opt.ls_iterations': 16}
+New MJX opt settings: Option(timestep=Array(0.01, dtype=float64), apirate=Array(100., dtype=float64), impratio=Array(5., dtype=float64), tolerance=Array(1.e-08, dtype=float64), ls_tolerance=Array(0.01, dtype=float64), noslip_tolerance=Array(1.e-06, dtype=float64), ccd_tolerance=Array(1.e-06, dtype=float64), gravity=Array([ 0.  ,  0.  , -9.81], dtype=float64), wind=Array([0., 0., 0.], dtype=float64), magnetic=Array([ 0. , -0.5,  0. ], dtype=float64), density=Array(0., dtype=float64), viscosity=Array(0., dtype=float64), o_margin=Array(0., dtype=float64), o_solref=Array([0.02, 1.  ], dtype=float64), o_solimp=Array([9.0e-01, 9.5e-01, 1.0e-03, 5.0e-01, 2.0e+00], dtype=float64), o_friction=Array([1.e+00, 1.e+00, 5.e-03, 1.e-04, 1.e-04], dtype=float64), has_fluid_params=np.False_, integrator=<IntegratorType.EULER: 0>, cone=<ConeType.PYRAMIDAL: 0>, jacobian=<JacobianType.AUTO: 2>, solver=<SolverType.NEWTON: 2>, iterations=4, ls_iterations=16, noslip_iterations=0, ccd_iterations=50, disableflags=<DisableBit.REFSAFE: 2048>, enableflags=<EnableBit.0: 0>, disableactuator=0, sdf_initpoints=40, sdf_iterations=10, dfx_max_ode_steps=None, dfx_approximate_integration=None, dfx_exact_use_semiimplicit=None, dfx_solver=None, dfx_stepsize_controller=None, dfx_pid_dt0=None, dfx_pid_rtol=None, dfx_pid_atol=None, dfx_adjoint=None, dfx_recursive_ncheckpoints=None, dfx_backsolve_solver=None, dfx_backsolve_stepsize_controller=None, dfx_backsolve_pid_rtol=None, dfx_backsolve_pid_atol=None, col_soft_enable=True, cfd_enable=True, cfd_solimp=[Array(0., dtype=float64), Array(0.01, dtype=float64), Array(0.05, dtype=float64), Array(1., dtype=float64), Array(2., dtype=float64)])
+Error executing job with overrides: ['+env=aloha_handover', '+diffmjx/cfd=enabled', '+diffmjx/collision=soft', '+diffmjx/integrator=default', 'wandb.project=DiffRL', 'wandb.entity=t-e-a-m', '+planner=gradient']
+Traceback (most recent call last):
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 164, in main
+    mpc_rollout(
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 49, in mpc_rollout
+    p = make_planner(instruction_params=cfg.env.instruction_params, **cfg.planner)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/diffmjx_mjpc/predictive_gradient_sampling.py", line 57, in make_planner
+    instruction = make_instruction(**instruction_params)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/diffmjx_mjpc/instruction.py", line 58, in make_instruction
+    reach_instructions = [ReachInstruction(**params) for params in reach_params]
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/diffmjx_mjpc/instruction.py", line 58, in <listcomp>
+    reach_instructions = [ReachInstruction(**params) for params in reach_params]
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/equinox/_module.py", line 574, in __call__
+    self = super(_ActualModuleMeta, initable_cls).__call__(*args, **kwargs)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/equinox/_better_abstract.py", line 228, in __call__
+    self = super().__call__(*args, **kwargs)
+TypeError: ReachInstruction.__init__() got an unexpected keyword argument 'weight'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

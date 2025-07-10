@@ -1,0 +1,17 @@
+{"time":"2025-07-07T16:18:52.765871622+02:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-07-07T16:18:55.028312945+02:00","level":"INFO","msg":"stream: created new stream","id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:55.028330257+02:00","level":"INFO","msg":"stream: started","id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:55.028336521+02:00","level":"INFO","msg":"handler: started","stream_id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:55.02836876+02:00","level":"INFO","msg":"sender: started","stream_id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:55.028375832+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:55.384674983+02:00","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-07-07T16:18:55.384721557+02:00","level":"ERROR","msg":"runupserter: failed to init run","error":"returned error 403: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"permission denied\",\"path\":[\"upsertBucket\"],\"extensions\":{\"code\":\"PERMISSION_ERROR\"}}]}"}
+{"time":"2025-07-07T16:18:56.386442463+02:00","level":"INFO","msg":"stream: closing","id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:56.386510386+02:00","level":"ERROR","msg":"sender: uploadConfigFile: stream: no run"}
+{"time":"2025-07-07T16:18:56.570828239+02:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-07-07T16:18:56.570864992+02:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404: {\"data\":{\"createRunFiles\":null},\"errors\":[{\"message\":\"run diffmjx-mjpc/hqnvwp9k not found during createRunFiles\",\"path\":[\"createRunFiles\"]}]}"}
+{"time":"2025-07-07T16:18:56.571082121+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-07T16:18:56.571098985+02:00","level":"INFO","msg":"handler: closed","stream_id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:56.57110978+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:56.571130203+02:00","level":"INFO","msg":"sender: closed","stream_id":"hqnvwp9k"}
+{"time":"2025-07-07T16:18:56.571134318+02:00","level":"INFO","msg":"stream: closed","id":"hqnvwp9k"}

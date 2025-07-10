@@ -3,10 +3,33 @@ name = "diffrl"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10, <3.11"
 dependencies = [
+    "brax>=0.12.4",
+    "diffmjx-mjpc",
+    "jax[cuda12,cuda12-pip]==0.5.2",
     "mujoco-mjx",
 ]
 
+[tool.uv.workspace]
+members = ["packages/brax",
+           "packages/diffmjx-mjpc",
+           "packages/mujoco/mjx"]
+
 [tool.uv.sources]
-mujoco-mjx = { path = "packages/mujoco/mjx" }
+mujoco-mjx = { workspace = true }
+diffmjx-mjpc = { workspace = true }
+brax = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "pudb>=2025.1",
+    "pyqt5>=5.15.11",
+]
+
+[tool.hatch.build]
+sources = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

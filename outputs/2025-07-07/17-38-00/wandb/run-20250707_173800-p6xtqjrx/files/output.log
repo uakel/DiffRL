@@ -1,0 +1,236 @@
+Overwriting xml settings with: {'opt.cfd_enable': True, 'opt.cfd_solimp': [0.0, 0.01, 0.05, 1.0, 2.0], 'opt.col_soft_enable': True, 'opt.timestep': 0.0025, 'opt.iterations': 4, 'opt.ls_iterations': 16}
+New MJX opt settings: Option(timestep=Array(0.0025, dtype=float64), apirate=Array(100., dtype=float64), impratio=Array(1., dtype=float64), tolerance=Array(1.e-08, dtype=float64), ls_tolerance=Array(0.01, dtype=float64), noslip_tolerance=Array(1.e-06, dtype=float64), ccd_tolerance=Array(1.e-06, dtype=float64), gravity=Array([ 0.  ,  0.  , -9.81], dtype=float64), wind=Array([0., 0., 0.], dtype=float64), magnetic=Array([ 0. , -0.5,  0. ], dtype=float64), density=Array(0., dtype=float64), viscosity=Array(0., dtype=float64), o_margin=Array(0., dtype=float64), o_solref=Array([0.02, 1.  ], dtype=float64), o_solimp=Array([9.0e-01, 9.5e-01, 1.0e-03, 5.0e-01, 2.0e+00], dtype=float64), o_friction=Array([1.e+00, 1.e+00, 5.e-03, 1.e-04, 1.e-04], dtype=float64), has_fluid_params=np.False_, integrator=<IntegratorType.EULER: 0>, cone=<ConeType.PYRAMIDAL: 0>, jacobian=<JacobianType.AUTO: 2>, solver=<SolverType.NEWTON: 2>, iterations=4, ls_iterations=16, noslip_iterations=0, ccd_iterations=50, disableflags=<DisableBit.0: 0>, enableflags=<EnableBit.0: 0>, disableactuator=0, sdf_initpoints=40, sdf_iterations=10, dfx_max_ode_steps=None, dfx_approximate_integration=None, dfx_exact_use_semiimplicit=None, dfx_solver=None, dfx_stepsize_controller=None, dfx_pid_dt0=None, dfx_pid_rtol=None, dfx_pid_atol=None, dfx_adjoint=None, dfx_recursive_ncheckpoints=None, dfx_backsolve_solver=None, dfx_backsolve_stepsize_controller=None, dfx_backsolve_pid_rtol=None, dfx_backsolve_pid_atol=None, col_soft_enable=True, cfd_enable=True, cfd_solimp=[Array(0., dtype=float64), Array(0.01, dtype=float64), Array(0.05, dtype=float64), Array(1., dtype=float64), Array(2., dtype=float64)])
+[JIT] Starting compilation of: rollout_cost_jit
+[JIT] Finished compilation of: rollout_cost_jit (took 27.648 s)
+  3%|███▍                                                                                                         | 2/64 [15:16<7:08:46, 414.94s/it]
+[JIT] Starting compilation of: plan_and_step
+[JIT] Starting compilation of: progress_policy
+[JIT] Finished compilation of: progress_policy (took 0.002 s)
+[JIT] Starting compilation of: rollout_cost_policy_grad
+[JIT] Finished compilation of: rollout_cost_policy_grad (took 32.270 s)
+[JIT] Finished compilation of: plan_and_step (took 703.700 s)
+Iteration 0
+sim_costs = [0.15350867 0.15350867 0.15345839 0.15335785 0.1532071  0.15300621
+ 0.15275528 0.15245441 0.15210376 0.1517035  0.15125382 0.15075495
+ 0.15020713 0.14961065 0.14896583 0.14827301 0.14753256]
+plan_cost = 19.066133220325426
+all_plan_costs = [[148.00460668 126.83980719 115.47843439 108.77268239 103.51503667
+  106.18146761 101.0538403   99.26411053  97.09613745  94.56860442
+   92.77025961  84.8516262   78.02663298  79.46040956  75.52859014
+   70.52357909  69.92673794  64.54432001  55.47875486  40.98048667
+   28.89992101  24.35093696  23.85584501  22.45883911  22.65248633
+   21.85471984  21.49714205  20.97939094  20.16149073  20.17707614
+   28.796366    28.47107185  19.06613322]]
+Iteration 1
+sim_costs = [0.14674492 0.14674492 0.14591053 0.1450299  0.14410356 0.1431321
+ 0.14211617 0.14105645 0.13995371 0.13880874 0.13762244 0.13639576
+ 0.13512973 0.13382546 0.13248416 0.13110715 0.12969584]
+plan_cost = 11.491311960954222
+all_plan_costs = [[17.19294553 18.98514547 18.31941498 17.37840655 22.44026235 16.79212308
+  16.86388012 16.08518663 15.94063365 16.67647687 15.05319164 17.714682
+  15.09627314 15.42913082 14.81905122 13.48539053 13.00878202 12.73044329
+  13.13985845 12.16716793 11.9116708  12.01158535 13.6927634  11.49131196
+  11.56305542 13.75599577 22.38911002 29.20456554 19.11562638 14.05244773
+  13.50113729 13.7587712  12.82527742]]
+Iteration 2
+sim_costs = [0.12825176 0.12825176 0.12677657 0.12527208 0.12374023 0.12218315
+ 0.12060312 0.11900263 0.11738438 0.1157513  0.11410657 0.11245363
+ 0.11079623 0.10913841 0.10748457 0.10583948 0.10420826]
+plan_cost = 9.306317308237483
+all_plan_costs = [[ 9.30631731 25.8141575  43.35130197 41.50298763 40.28040263 39.48478747
+  32.33734941 38.92119365 38.1710165  37.83295081 27.6363172  14.01693101
+  18.24463739 24.11368638 33.70209776 22.81291269 14.8307158  34.90501228
+  27.99728677 12.48011464 16.98863181 35.64949251 46.39305718 43.88616685
+  31.01921513 19.03276453 34.61798991 35.18605334 32.30400568 30.7756081
+  26.50245708 22.2921257  22.01248919]]
+Iteration 3
+sim_costs = [0.10259649 0.10259649 0.10101015 0.0994557  0.09794005 0.09647061
+ 0.09505529 0.09370246 0.09242098 0.09122015 0.09010966 0.08909955
+ 0.08820009 0.08742171 0.08677488 0.08626993 0.0859169 ]
+plan_cost = 6.522227105504029
+all_plan_costs = [[ 7.58537756 18.86434407  7.89129844  7.25248941  9.55491286 42.18327527
+  32.90131293 11.32749069  7.52418275  7.45726497  8.50075397  7.15833041
+   7.19265722  7.0215644   7.1907552   6.90449085  7.43668059  7.06484996
+   6.9633059   6.80312166  6.93085219  6.77706761  6.92052804  6.65348716
+   8.7443124  35.10469345 13.7662838   6.9878317   7.98614749  6.67579667
+   6.67122636  6.62842478  6.52222711]]
+Iteration 4
+sim_costs = [0.08572541 0.08572541 0.08570444 0.08586218 0.08620585 0.0867416
+ 0.08747439 0.08840792 0.08954458 0.09088551 0.09243059 0.09381098
+ 0.09495405 0.09579395 0.09627729 0.09638157 0.09610368]
+plan_cost = 4.547488981000208
+all_plan_costs = [[5.05223483 5.07359498 5.06675368 5.37658889 5.10555059 4.90268641
+  4.85353071 4.9942913  5.00264846 4.81728191 8.93835947 4.83652357
+  4.85991383 4.80877968 4.9426707  9.60533135 5.23346945 4.84068758
+  4.949672   4.74701027 4.72926857 4.70949613 4.7123927  4.74979691
+  4.59287331 4.63410296 4.64209731 4.54874387 4.9428979  4.59765797
+  4.54748898 4.6760857  4.70389035]]
+Iteration 5
+sim_costs = [0.09547746 0.09547746 0.09455926 0.09338463 0.09200261 0.09045525
+ 0.08877248 0.08698448 0.08510951 0.08316063 0.08114812 0.07909126
+ 0.07700751 0.07491035 0.07281084 0.07071496 0.06862818]
+plan_cost = 2.8502209544299384
+all_plan_costs = [[3.17341158 3.28306695 3.13623668 3.0910725  3.09754129 3.04165814
+  3.08647566 3.05651828 3.02407469 3.01446569 2.99701971 2.97611279
+  2.99752737 2.99635088 2.98461374 2.9483886  2.96631823 2.92802923
+  2.92301958 2.95363892 2.90076222 2.89859213 2.97327845 2.90367373
+  3.00466083 2.92358459 2.91902851 2.89386549 2.89682408 2.85022095
+  2.87695019 2.91272931 2.89424326]]
+Iteration 6
+sim_costs = [0.06655295 0.06655295 0.06449023 0.06243796 0.06039533 0.05836522
+ 0.05634716 0.05434246 0.05234981 0.05036827 0.04839823 0.04643967
+ 0.04449219 0.04255728 0.04063634 0.03873793 0.03692469]
+plan_cost = 1.4161848283882463
+all_plan_costs = [[1.52679519 1.72459332 1.56048437 1.56696311 1.49332577 1.51626595
+  1.4980684  1.49925471 1.49459009 1.47071456 1.46005023 1.45478371
+  1.45088549 1.44823425 1.45136885 1.47945682 1.47335249 1.44051341
+  1.45880762 1.46356198 1.44536386 1.48142016 1.44865888 1.43290107
+  1.42979741 1.44393822 1.43874056 1.41966101 1.41618483 1.41957379
+  1.42956738 1.41815964 1.41780217]]
+Iteration 7
+sim_costs = [0.03519578 0.03519578 0.03354253 0.03195543 0.03042622 0.02895028
+ 0.02752315 0.02613388 0.02478999 0.02348105 0.02220318 0.02094213
+ 0.01969168 0.01844527 0.01719732 0.01594532 0.01468763]
+plan_cost = 0.5246461743262628
+all_plan_costs = [[0.56765148 0.85244279 0.65164668 0.7039173  0.61678866 0.62906802
+  0.60353785 0.59827429 0.59136237 0.56752319 0.56057823 0.57766412
+  0.55990888 0.56921338 0.55843932 0.55805261 0.55882038 0.55222291
+  0.55454731 0.55359911 0.54880959 0.5514774  0.56028286 0.55395493
+  0.56804424 0.54464966 0.53230289 0.52806869 0.52904884 0.54037142
+  0.58167272 0.52464617 0.5326947 ]]
+Iteration 8
+sim_costs = [0.01342343 0.01342343 0.01215268 0.01087669 0.00960227 0.00835341
+ 0.00717197 0.00608128 0.00508642 0.00419265 0.00340382 0.00272336
+ 0.00214789 0.00165339 0.00124578 0.00091433 0.0006548 ]
+plan_cost = 0.11716739178810111
+all_plan_costs = [[0.13045754 0.48340783 0.2238882  0.22112101 0.14410434 0.2271792
+  0.15208823 0.21136247 0.1562086  0.16939073 0.12061554 0.14521002
+  0.13749334 0.18290122 0.12453119 0.11917769 0.13126665 0.15731637
+  0.11726608 0.12283476 0.13815295 0.13046183 0.12315878 0.14821201
+  0.14355493 0.1326054  0.1274272  0.1255129  0.13802978 0.12114784
+  0.11796509 0.11716739 0.11906   ]]
+Iteration 9
+sim_costs = [4.52901379e-04 4.52901379e-04 3.03650593e-04 2.00366796e-04
+ 1.27978368e-04 8.06226307e-05 4.96459995e-05 3.06920512e-05
+ 1.95854748e-05 1.34297813e-05 1.04754045e-05 9.48854334e-06
+ 9.83824803e-06 1.09796198e-05 1.24642040e-05 1.40429683e-05
+ 1.55450866e-05]
+plan_cost = 0.012919831278003668
+all_plan_costs = [[0.04799949 0.2578163  0.120085   0.07669968 0.04338201 0.08052822
+  0.04047943 0.02551529 0.06702672 0.02355183 0.02266082 0.03746221
+  0.03711225 0.03503953 0.05458833 0.01989604 0.02230923 0.08087859
+  0.01917669 0.04591545 0.02928105 0.01291983 0.02529684 0.08801208
+  0.01387425 0.03094968 0.04425059 0.03349405 0.06125755 0.01469198
+  0.02294512 0.04988488 0.01393696]]
+Iteration 10
+sim_costs = [1.64200868e-05 1.64200868e-05 1.66498777e-05 1.65443844e-05
+ 1.63947083e-05 1.64406677e-05 1.67983679e-05 1.75152934e-05
+ 1.85809917e-05 1.99947832e-05 2.17543274e-05 2.38515775e-05
+ 2.61313210e-05 2.85615406e-05 3.09768375e-05 3.34696969e-05
+ 3.61237935e-05]
+plan_cost = 0.009923538883986446
+all_plan_costs = [[0.03894231 0.14942133 0.06079667 0.11848665 0.05065565 0.1417346
+  0.04008381 0.0588738  0.05997202 0.04532871 0.03334209 0.0398025
+  0.02648198 0.03804467 0.02669978 0.02598729 0.02203261 0.04197277
+  0.01352979 0.02512614 0.04992577 0.01097832 0.0403221  0.02440796
+  0.01541463 0.02454627 0.03835164 0.02634758 0.01528562 0.06242597
+  0.01408823 0.00992354 0.01177965]]
+Iteration 11
+sim_costs = [3.90496485e-05 3.90496485e-05 4.24594285e-05 4.64710301e-05
+ 5.10171014e-05 5.58056815e-05 6.03357930e-05 6.40411161e-05
+ 6.63864353e-05 6.69568929e-05 6.54950424e-05 6.18543826e-05
+ 5.61588648e-05 4.86614178e-05 3.98303797e-05 3.03547949e-05
+ 2.10782343e-05]
+plan_cost = 0.007682471836580877
+all_plan_costs = [[0.04496255 0.18719211 0.10460874 0.04547006 0.02967871 0.03057174
+  0.078539   0.05270397 0.04043863 0.03691422 0.02156117 0.03105551
+  0.0563486  0.02962403 0.02095668 0.04176224 0.01621324 0.01615841
+  0.02679997 0.01811326 0.02097887 0.01387388 0.02788072 0.02883394
+  0.02026809 0.02697038 0.05754061 0.01451135 0.0331129  0.02120774
+  0.00768247 0.02655984 0.03124747]]
+Iteration 12
+sim_costs = [1.30661430e-05 1.30661430e-05 7.36587089e-06 4.61920770e-06
+ 4.14977696e-06 4.51921900e-06 4.92895176e-06 4.98951434e-06
+ 4.88171477e-06 4.67954428e-06 4.54225934e-06 4.59673746e-06
+ 4.84135957e-06 5.39711838e-06 6.05786980e-06 6.67086568e-06
+ 7.12319555e-06]
+plan_cost = 0.010421555186952002
+all_plan_costs = [[0.03275724 0.209614   0.24655469 0.05063917 0.34011331 0.14522034
+  0.12166282 0.06287897 0.05705825 0.07605828 0.04937899 0.02590112
+  0.03209962 0.01956085 0.14564941 0.01889286 0.0264727  0.08887618
+  0.04500287 0.03402378 0.02877977 0.04798476 0.01098326 0.0207935
+  0.15282471 0.01107685 0.05967761 0.03067033 0.01325622 0.02975471
+  0.04930875 0.01917501 0.01042156]]
+Iteration 13
+sim_costs = [7.31293711e-06 7.31293711e-06 7.19328571e-06 6.77048259e-06
+ 6.07762928e-06 5.21685009e-06 4.09201963e-06 2.87137158e-06
+ 1.73198895e-06 8.12280004e-07 2.18051879e-07 3.02843996e-08
+ 2.44222232e-07 7.73577238e-07 1.48671270e-06 2.24125212e-06
+ 2.93273488e-06]
+plan_cost = 0.009665734763517998
+all_plan_costs = [[0.01933376 0.37046595 0.14961742 0.0893267  0.13590376 0.04225294
+  0.02281641 0.01233003 0.09091286 0.03714402 0.02960906 0.09283585
+  0.01100368 0.04425315 0.01517427 0.01644501 0.07425406 0.01055533
+  0.0396214  0.01146889 0.02504478 0.02651073 0.02172691 0.08279414
+  0.0205821  0.02976991 0.01478988 0.00966573 0.01276442 0.0146709
+  0.05362617 0.01513915 0.05022922]]
+Traceback (most recent call last):
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 172, in <module>
+    main()
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 164, in main
+    mpc_rollout(
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 60, in mpc_rollout
+    (d_new, policy_new), (sim_costs, sim_states, sim_terms, _, plan_states, _, plan_cost, all_plan_costs) = plan_and_step(policy, m=m, d=d, rng=rng_plan_and_step, p=p)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/diffmjx_mjpc/utils.py", line 73, in wrapper
+    return jitted_func(*args, **kwargs)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/equinox/_jit.py", line 209, in __call__
+    return _call(self, False, args, kwargs)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/equinox/_jit.py", line 263, in _call
+    marker, _, _ = out = jit_wrapper._cached(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/mujoco/mjx/_src/dataclasses.py", line 78, in clz_from_iterable
+    def clz_from_iterable(meta, data):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 172, in <module>
+    main()
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 164, in main
+    mpc_rollout(
+  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 60, in mpc_rollout
+    (d_new, policy_new), (sim_costs, sim_states, sim_terms, _, plan_states, _, plan_cost, all_plan_costs) = plan_and_step(policy, m=m, d=d, rng=rng_plan_and_step, p=p)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/diffmjx_mjpc/utils.py", line 73, in wrapper
+    return jitted_func(*args, **kwargs)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/equinox/_jit.py", line 209, in __call__
+    return _call(self, False, args, kwargs)
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/equinox/_jit.py", line 263, in _call
+    marker, _, _ = out = jit_wrapper._cached(
+  File "/home/franzleo/Projects/DiffRL/.venv/lib/python3.10/site-packages/mujoco/mjx/_src/dataclasses.py", line 78, in clz_from_iterable
+    def clz_from_iterable(meta, data):
+KeyboardInterrupt

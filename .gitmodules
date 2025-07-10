@@ -4,3 +4,9 @@
 [submodule "packages/mujoco"]
 	path = packages/mujoco
 	url = git@github.com:a-paulus/mujoco.git
+[submodule "packages/myosuite"]
+	path = packages/myosuite
+	url = https://github.com/MyoHub/myosuite.git
+[submodule "packages/brax"]
+	path = packages/brax
+	url = git@github.com:google/brax.git
