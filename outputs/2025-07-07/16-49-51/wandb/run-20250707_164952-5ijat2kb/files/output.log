@@ -1,7 +1,0 @@
-Error executing job with overrides: ['+env=aloha_handover', '+diffmjx/cfd=enabled', '+diffmjx/collision=hard', '+diffmjx.integrator=default', 'wandb.project=DiffRL', 'wandb.entity=t-e-a-m']
-Traceback (most recent call last):
-  File "/home/franzleo/Projects/DiffRL/packages/diffmjx-mjpc/diffmjx_mjpc/main.py", line 146, in main
-    **cfg_to_flat_dct(cfg.diffmjx.integrator.xml_overwrite),
-AttributeError: 'str' object has no attribute 'xml_overwrite'
-
-Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

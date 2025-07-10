@@ -1,7 +1,0 @@
-- +env=aloha_handover
-- +diffmjx/cfd=enabled
-- +diffmjx/collision=soft
-- +diffmjx/integrator=default
-- wandb.project=DiffRL
-- wandb.entity=t-e-a-m
-- +planer=gradient
