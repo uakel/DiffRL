@@ -2,3 +2,4 @@
 *.sif
 __pycache__/
 outputs/
+wandb/

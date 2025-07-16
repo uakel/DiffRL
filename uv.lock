@@ -363,6 +363,8 @@ dependencies = [
     { name = "diffmjx-mjpc" },
     { name = "jax", extra = ["cuda12", "cuda12-pip"] },
     { name = "mujoco-mjx" },
+    { name = "omegaconf" },
+    { name = "pyyaml" },
 ]
 
 [package.dev-dependencies]
@@ -377,6 +379,8 @@ requires-dist = [
     { name = "diffmjx-mjpc", editable = "packages/diffmjx-mjpc" },
     { name = "jax", extras = ["cuda12", "cuda12-pip"], specifier = "==0.5.2" },
     { name = "mujoco-mjx", editable = "packages/mujoco/mjx" },
+    { name = "omegaconf", specifier = ">=2.3.0" },
+    { name = "pyyaml", specifier = ">=6.0.2" },
 ]
 
 [package.metadata.requires-dev]

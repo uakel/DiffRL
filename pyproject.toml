@@ -9,6 +9,8 @@ dependencies = [
     "diffmjx-mjpc",
     "jax[cuda12,cuda12-pip]==0.5.2",
     "mujoco-mjx",
+    "omegaconf>=2.3.0",
+    "pyyaml>=6.0.2",
 ]
 
 [tool.uv.workspace]
